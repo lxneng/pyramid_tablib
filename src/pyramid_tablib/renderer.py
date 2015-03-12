@@ -14,7 +14,8 @@ class TabLibBaseRendererFactory(object):
             if ct == response.default_content_type:
                 response.content_type = self.content_type
         data = tablib.Dataset(*value.get('data', []),
-                headers=value.get('headers', []))
+                headers=value.get('headers', []),
+                title=value.get('title'))
         return data
 
 

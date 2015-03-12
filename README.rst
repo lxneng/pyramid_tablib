@@ -24,4 +24,4 @@ Now in your view
     def all_users(request):
         headers = ['Name', 'City', 'Email']
         data = [(user.name, user.city, user.email) for user in users]
-        return {'data': data, 'headers': headers}
+        return {'data': data, 'headers': headers, 'title': 'Users'}
